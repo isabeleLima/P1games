@@ -1,0 +1,25 @@
+﻿  compilation object save succeeded; see C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Shaders\Pixel.cso
+  compilation object save succeeded; see C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Shaders\Vertex.cso
+  Arrow.cpp
+  Home.cpp
+  level1.cpp
+  Animation.cpp
+  Engine.cpp
+  Game.cpp
+  Geometry.cpp
+  Graphics.cpp
+  Image.cpp
+  Object.cpp
+  index.cpp
+  Enemy.cpp
+  Player.cpp
+  Renderer.cpp
+  Scene.cpp
+  Sprite.cpp
+  Texture.cpp
+  TileSet.cpp
+C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Enemy.cpp(21,15): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Enemy.cpp(21,12): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+  Timer.cpp
+  Window.cpp
+  Animation.vcxproj -> C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\x64\Debug\Animation.exe
