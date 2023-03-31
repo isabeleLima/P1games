@@ -29,10 +29,14 @@ private:
     Animation* spriteAnimation;
     Image* arrow;           // imagem do míssil
     float vel;                  // velocidade horizontal
+    Timer arrowTimer;
 
 public:
     Player(TileSet* tiles);
     ~Player();
+
+    void OnCollision(Object* obj);     // resolução da colisão
+    void EnemyCollision(Object* obj);
 
     void Update();
     void Draw();

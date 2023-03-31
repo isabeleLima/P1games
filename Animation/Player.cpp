@@ -13,18 +13,21 @@
 #include "Arrow.h"
 #include "Home.h"
 #include "Level1.h"
+#include "index.h"
 
 
 // ---------------------------------------------------------------------------------
 
 Player::Player(TileSet* tiles)
 {
-    //sprite = new Sprite("Resources/player.png");
-    
+    type = PLAYER;
+
     spriteAnimation = new Animation(tiles, 0.7f, true);
 
-    arrow = new Image("Resources/arrow.png");
+    arrow = new Image("Resources/enemy1.png");
+    arrowTimer.Start();
 
+    BBox(new Rect(-30, -40, 30, 49));
     MoveTo(window->CenterX(), window->Height() - 50.0f, Layer::FRONT);
     vel = 250;
 }
@@ -37,18 +40,33 @@ Player::~Player()
     delete arrow;
 }
 
+void Player::OnCollision(Object* obj)
+{
+    if (obj->Type() == ENEMY)
+        EnemyCollision(obj);
+}
+
+void Player::EnemyCollision(Object* obj)
+{
+    window->Close();
+}
+
 // ---------------------------------------------------------------------------------
 
 void Player::Update()
 {
-    // dispara um míssil com a barra de espaço
-    //if (window->KeyPress(VK_SPACE))
-    //{
-        // tamanho do míssel é 26x30
-       // Arrow* a = new Arrow(arrow);
-       // a->MoveTo(x, y - sprite->Height() / 2.0f, Layer::FRONT);
-       // Level1::scene->Add(a, MOVING);
-   // }
+    SpriteData sprite = spriteAnimation->ReturnSprite();
+
+    if (window->KeyDown(VK_SPACE))
+    {
+        if (arrowTimer.Elapsed(0.4)) {
+            arrowTimer.Reset();
+            // tamanho do míssel é 26x30
+            Arrow* m = new Arrow(new Image("Resources/enemy1.png"));
+            m->MoveTo(x, y - sprite.height / 2.0f, Layer::UPPER);
+            Level1::scene->Add(m, MOVING);
+        }
+    }
 
     // desloca nave horizontalmente
     if (window->KeyDown(VK_RIGHT))
@@ -56,15 +74,12 @@ void Player::Update()
     if (window->KeyDown(VK_LEFT))
         Translate(-vel * gameTime, 0);
 
-     //mantém nave dentro da janela
-
-    SpriteData sprite = spriteAnimation->ReturnSprite();
-    
-
-    if (x - sprite.width / 2.0f < 0)
-       MoveTo(sprite.width / 2.0f, y);
-    if (x + sprite.width / 2.0f > window->Width())
-        MoveTo(window->Width() - sprite.width / 2.0f, y);
+    int bounds = 200;
+    // mantém nave dentro da janela
+    if (x - sprite.width / 2.0f < bounds)
+        MoveTo(sprite.width / 2.0f + bounds, y);
+    if (x + sprite.width / 2.0f > window->Width() - bounds)
+        MoveTo(window->Width() - bounds - sprite.width / 2.0f, y);
 
     spriteAnimation->NextFrame();
 }

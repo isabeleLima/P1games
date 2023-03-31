@@ -12,13 +12,18 @@
 #include "Arrow.h"
 #include "Level1.h"
 #include "Scene.h"
+#include "index.h"
+
 // ---------------------------------------------------------------------------------
 
 Arrow::Arrow(Image* img)
 {
+    type = ARROW;
+
     sprite = new Sprite(img);
-    MoveTo(window->CenterX(), window->Height() - 50.0f, Layer::FRONT);
     vel = 250;
+
+    BBox(new Rect(x - 5, y - 5, x + 4, y + 4));
 }
 
 // ---------------------------------------------------------------------------------
@@ -38,6 +43,10 @@ void Arrow::Update()
     // remove mísseis que saem da janela
     if (y < 0)
        Level1::scene->Delete();
+}
+
+void Arrow::OnCollision(Object* obj) {
+
 }
 
 // ---------------------------------------------------------------------------------

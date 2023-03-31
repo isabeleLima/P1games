@@ -52,6 +52,11 @@ void Level1::Init()
 
 void Level1::Update()
 {
+    if (window->KeyPress('B'))
+    {
+        viewBBox = !viewBBox;
+    }
+
     auto end = std::chrono::high_resolution_clock::now(); // tempo final
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start); // tempo total em microssegundos
 
@@ -59,7 +64,7 @@ void Level1::Update()
         start = std::chrono::high_resolution_clock::now();
 
 
-        int radom = 0 + (rand() % 200);
+        int radom = 0 + (rand() % 2);
         if (radom % 2 == 0) {
             SpriteEnemy = new TileSet("Resources/enemy1Sprite.png", 96, 96, 2, 2);
         }
@@ -68,7 +73,7 @@ void Level1::Update()
         }
 
         Enemy* enemy = new Enemy(SpriteEnemy);
-        scene->Add(enemy, MOVING);
+        scene->Add(enemy, STATIC);
     }
     // sai com o pressionamento do ESC
     if (window->KeyDown(VK_ESCAPE))
@@ -88,6 +93,9 @@ void Level1::Draw()
     backAnim->Draw(window->CenterX(), window->CenterY(), Layer::FRONT);
     yoshiAnim->Draw(window->CenterX(), window->CenterY(), Layer::BACK);
     scene->Draw();
+
+    if (viewBBox)
+        scene->DrawBBox();
 } 
 
 // ------------------------------------------------------------------------------

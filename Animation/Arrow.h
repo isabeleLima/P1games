@@ -32,6 +32,8 @@ public:
     Arrow(Image* img);
     ~Arrow();
 
+    void OnCollision(Object* obj);     // resolução da colisão
+
     void Update();
     void Draw();
 };

@@ -1,25 +1,6 @@
-﻿  compilation object save succeeded; see C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Shaders\Pixel.cso
-  compilation object save succeeded; see C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Shaders\Vertex.cso
-  Arrow.cpp
-  Home.cpp
-  level1.cpp
-  Animation.cpp
-  Engine.cpp
-  Game.cpp
-  Geometry.cpp
-  Graphics.cpp
-  Image.cpp
-  Object.cpp
-  index.cpp
-  Enemy.cpp
-  Player.cpp
-  Renderer.cpp
+﻿  Enemy.cpp
   Scene.cpp
-  Sprite.cpp
-  Texture.cpp
-  TileSet.cpp
-C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Enemy.cpp(21,15): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Enemy.cpp(21,12): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-  Timer.cpp
-  Window.cpp
-  Animation.vcxproj -> C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\x64\Debug\Animation.exe
+C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Enemy.cpp(23,11): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
+C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Enemy.cpp(25,15): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Enemy.cpp(25,12): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+  Animation.vcxproj -> C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\x64\Debug\Animation.exe

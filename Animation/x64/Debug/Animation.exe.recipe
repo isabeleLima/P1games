@@ -2,15 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\x64\Debug\Animation.exe</FullPath>
+      <FullPath>C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\x64\Debug\Animation.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Shaders\Pixel.cso</FullPath>
+      <FullPath>C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Shaders\Pixel.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Shaders\Vertex.cso</FullPath>
+      <FullPath>C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Shaders\Vertex.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

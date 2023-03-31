@@ -35,6 +35,9 @@ public:
     Enemy(TileSet* tiles);
     ~Enemy();
 
+    void OnCollision(Object* obj);     // resolução da colisão
+    void ArrowCollision(Object* obj);
+
     void Update();
     void Draw();
 };
