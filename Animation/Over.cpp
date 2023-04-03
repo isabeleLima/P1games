@@ -17,7 +17,7 @@
 
 void Over::Init()
 {
-    backg = new Sprite("Resources/Over.png");
+    backg = new Sprite("Resources/gameOver.png");
 
     enter = new TileSet("Resources/over.png", 960, 540, 2, 4);
     enterAnimation = new Animation(enter, 0.30f, true);

@@ -24,13 +24,13 @@ Player::Player(TileSet* tiles)
 {
     type = PLAYER;
 
-    spriteAnimation = new Animation(tiles, 0.7f, true);
+    spriteAnimation = new Animation(tiles, 0.2f, true);
 
     arrow = new Image("Resources/enemy1.png");
     arrowTimer.Start();
 
     BBox(new Rect(-30, -40, 30, 49));
-    MoveTo(window->CenterX(), window->Height() - 50.0f, Layer::FRONT);
+    MoveTo(window->CenterX(), window->Height() - 60.0f, Layer::FRONT);
     vel = 250;
 }
 

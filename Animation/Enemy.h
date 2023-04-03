@@ -29,6 +29,7 @@ class Enemy : public Object
 {
 private:
     Animation* spriteAnimation;
+    Animation* hit;
     float vel;
 
 public:

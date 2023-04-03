@@ -254,6 +254,7 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="index.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Hit.cpp" />
     <ClCompile Include="Over.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Renderer.cpp" />
@@ -272,6 +273,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Geometry.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="Hit.h" />
     <ClInclude Include="Home.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="index.h" />

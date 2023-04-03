@@ -1,11 +1,4 @@
-﻿  Arrow.cpp
-  Enemy.cpp
-  Home.cpp
-  Over.cpp
-  Player.cpp
-  level1.cpp
-C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Enemy.cpp(27,11): warning C4244: 'inicializando': conversão de 'float' para 'int', possível perda de dados
-C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Enemy.cpp(29,15): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Enemy.cpp(29,12): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\Animation\Player.cpp(64,12): warning C4305: 'argumento': truncamento de 'double' para 'float'
-  Animation.vcxproj -> C:\Users\ddaav\Documents\UFERSA\Jogos\P1games\x64\Debug\Animation.exe
+﻿  Hit.cpp
+C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Hit.cpp(26,15): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\Animation\Hit.cpp(26,12): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+  Animation.vcxproj -> C:\Users\Isabelle Cristina\Documents\Semestre6\Jogos\P1games\x64\Debug\Animation.exe

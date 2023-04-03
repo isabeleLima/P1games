@@ -41,7 +41,7 @@ void Level1::Init()
     backSet = new TileSet("Resources/spriteV4.png", 960, 540, 6, 36);
     yoshi = new TileSet("Resources/spriteGrass.png", 960, 540, 2, 12);
 
-    spritePlayer = new TileSet("Resources/playerSprite.png", 96, 96, 2, 2);
+    spritePlayer = new TileSet("Resources/playerSpriteV2.png", 96, 96, 2, 4);
 
     backAnim = new Animation(backSet, 0.035f, true);
     yoshiAnim = new Animation(yoshi, 0.09f, true);

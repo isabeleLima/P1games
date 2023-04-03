@@ -15,6 +15,7 @@
 
 #include "Engine.h"
 #include "Over.h"
+#include "Hit.h"
 
 // ---------------------------------------------------------------------------------
 
@@ -60,7 +61,10 @@ void Enemy::OnCollision(Object* obj) {
 
 void Enemy::ArrowCollision(Object* obj) {
     hp -= 1;
-    Level1::scene->Delete(obj, MOVING);
+    Hit* hit = new Hit(new TileSet("Resources/spriteHit.png", 32, 64, 2, 2), obj->X(), obj->Y());
+    Level1::scene->Add(hit, STATIC);
+
+    Level1::scene->Delete(obj, MOVING);  
 }
 
 // ---------------------------------------------------------------------------------
