@@ -32,7 +32,8 @@ private:
     float vel;
 
 public:
-    Enemy(TileSet* tiles);
+    int hp;
+    Enemy(TileSet* tiles, int hp);
     ~Enemy();
 
     void OnCollision(Object* obj);     // resolução da colisão

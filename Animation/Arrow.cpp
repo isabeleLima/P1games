@@ -13,15 +13,16 @@
 #include "Level1.h"
 #include "Scene.h"
 #include "index.h"
+#include "Enemy.h"
 
 // ---------------------------------------------------------------------------------
 
-Arrow::Arrow(Image* img)
+Arrow::Arrow(TileSet* tiles)
 {
     type = ARROW;
 
-    sprite = new Sprite(img);
-    vel = 250;
+    spriteAnimation = new Animation(tiles, 0.5f, true);
+    vel = 450;
 
     BBox(new Rect(x - 5, y - 5, x + 4, y + 4));
 }
@@ -30,7 +31,7 @@ Arrow::Arrow(Image* img)
 
 Arrow::~Arrow()
 {
-    delete sprite;
+    delete spriteAnimation;
 }
 
 // ---------------------------------------------------------------------------------
@@ -42,11 +43,20 @@ void Arrow::Update()
 
     // remove mísseis que saem da janela
     if (y < 0)
-       Level1::scene->Delete();
+        Level1::scene->Delete();
 }
 
 void Arrow::OnCollision(Object* obj) {
+    if (obj->Type() == ENEMY)
+        EnemyCollision(obj);
+}
 
+void Arrow::EnemyCollision(Object* obj) {
+    Enemy* e = (Enemy*)obj;
+
+    if (e->hp <= 0) {
+        Level1::scene->Delete(obj, STATIC);
+    }
 }
 
 // ---------------------------------------------------------------------------------

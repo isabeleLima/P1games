@@ -18,12 +18,17 @@
 #include "Game.h"
 #include "Sprite.h"
 
+#include "TileSet.h"
+#include "Animation.h"
 // ------------------------------------------------------------------------------
 
 class Home : public Game
 {
 private:
     Sprite* backg = nullptr;       // pano de fundo
+
+    TileSet* enter = nullptr;
+    Animation* enterAnimation = nullptr;
 
 public:
     void Init();                    // inicialização
@@ -34,4 +39,5 @@ public:
 
 // -----------------------------------------------------------------------------
 
-#endif#pragma once
+#endif
+#pragma once

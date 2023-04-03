@@ -42,8 +42,11 @@ private:
     TileSet* spritePlayer;            // sprite do player
     TileSet* SpriteEnemy;            // sprite do player
 
+    int enemyInterval;
+
 public:
     static Scene* scene;
+    static bool over;
     void Init();                    // inicializa jogo
     void Update();                  // atualiza lógica do jogo
     void Draw();                    // desenha jogo

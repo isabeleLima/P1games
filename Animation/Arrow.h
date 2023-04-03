@@ -20,19 +20,23 @@
 #include "Sprite.h"             // interface de sprites
 #include "Image.h"              // interface de image
 #include "Scene.h"
+
+#include "TileSet.h"
+#include "Animation.h"
 // ---------------------------------------------------------------------------------
 
 class Arrow : public Object
 {
 private:
-    Sprite* sprite;
+    Animation* spriteAnimation;
     float vel;
 
 public:
-    Arrow(Image* img);
+    Arrow(TileSet* tiles);
     ~Arrow();
 
     void OnCollision(Object* obj);     // resolução da colisão
+    void EnemyCollision(Object* obj);
 
     void Update();
     void Draw();
@@ -42,7 +46,7 @@ public:
 // Funções Membro Inline
 inline void Arrow::Draw()
 {
-    sprite->Draw(x, y, z);
+    spriteAnimation->Draw(x, y, z);
 }
 
 // ---------------------------------------------------------------------------------

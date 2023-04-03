@@ -18,19 +18,26 @@
 void Home::Init()
 {
     backg = new Sprite("Resources/home.png");
+
+    enter = new TileSet("Resources/enter.png", 960, 540, 2, 4);
+    enterAnimation = new Animation(enter, 0.30f, true);
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Finalize()
 {
+    delete enterAnimation;
     delete backg;
+    delete enter;
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Update()
 {
+    enterAnimation->NextFrame();
+
     // sai do jogo com a tecla ESC
     if (window->KeyPress(VK_ESCAPE))
         window->Close();
@@ -44,6 +51,7 @@ void Home::Update()
 
 void Home::Draw()
 {
+    enterAnimation->Draw(window->CenterX(), window->CenterY(), Layer::FRONT);
     backg->Draw(window->CenterX(), window->CenterY(), Layer::BACK);
 }
 

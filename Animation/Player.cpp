@@ -14,6 +14,8 @@
 #include "Home.h"
 #include "Level1.h"
 #include "index.h"
+#include "Engine.h"
+#include "Over.h"
 
 
 // ---------------------------------------------------------------------------------
@@ -48,7 +50,7 @@ void Player::OnCollision(Object* obj)
 
 void Player::EnemyCollision(Object* obj)
 {
-    window->Close();
+    Level1::over = true;
 }
 
 // ---------------------------------------------------------------------------------
@@ -62,7 +64,7 @@ void Player::Update()
         if (arrowTimer.Elapsed(0.4)) {
             arrowTimer.Reset();
             // tamanho do míssel é 26x30
-            Arrow* m = new Arrow(new Image("Resources/enemy1.png"));
+            Arrow* m = new Arrow(new TileSet("Resources/arrow.png", 15, 36, 1, 1));
             m->MoveTo(x, y - sprite.height / 2.0f, Layer::UPPER);
             Level1::scene->Add(m, MOVING);
         }
